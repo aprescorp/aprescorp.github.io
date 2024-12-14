@@ -9,13 +9,14 @@
         body {
             margin: 0;
             height: 100vh;
+            font-family: 'Roboto', sans-serif;
+            color: white;
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
             padding: 20px;
             box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-            color: white;
+            background: black; /* Fallback color */
             position: relative;
         }
         .background {
@@ -24,17 +25,17 @@
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
-            filter: brightness(50%); /* Darkens the background image */
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Places it behind other content */
+            z-index: -1;
+            opacity: 0.7; /* Adjust transparency */
         }
         .email {
             font-size: 1.5em;
-            z-index: 1; /* Ensures it stays on top */
+            z-index: 1;
         }
     </style>
 </head>
