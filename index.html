@@ -7,13 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-image: url('data/img/background.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Ensures the image covers the entire viewport */
-            background-repeat: no-repeat;
-            color: white;
-            font-family: 'Roboto', sans-serif;
             margin: 0;
             height: 100vh;
             display: flex;
@@ -21,13 +14,32 @@
             align-items: flex-start;
             padding: 20px;
             box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            position: relative;
+        }
+        .background {
+            background-image: url('data/img/background.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            filter: brightness(50%); /* Darkens the background image */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Places it behind other content */
         }
         .email {
             font-size: 1.5em;
+            z-index: 1; /* Ensures it stays on top */
         }
     </style>
 </head>
 <body>
+    <div class="background"></div>
     <div class="email">
         <p><a href="mailto:aprescorp@gmail.com" style="color: white; text-decoration: none;">ApresCorp@gmail.com</a></p>
     </div>
