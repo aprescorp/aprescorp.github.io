@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Email Display</title>
+    <style>
+        body {
+            background-image: url('data/img/background.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .email {
+            font-size: 1.5em;
+            background-color: rgba(0, 0, 0, 0.5); /* Slight background for better readability */
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, world!</h1>
+    <div class="email">
+        <p><a href="mailto:aprescorp@gmail.com" style="color: white; text-decoration: none;">ApresCorp@gmail.com</a></p>
+    </div>
 </body>
 </html>
