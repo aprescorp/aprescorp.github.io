@@ -17,13 +17,14 @@
             align-items: flex-start;
             padding: 20px;
             box-sizing: border-box;
-            background: rgb(23, 18, 14); /* Fallback color */
+            background: rgb(0, 0, 0); /* Fallback color */
             backdrop-filter: blur(10px);
             position: relative;
         }
         .background {
-            background-image: url('data/img/background.png');
-            background-size: contain; /* Ensures the whole image fits within the viewport */
+            background-image: url('data/img/city-background.jpeg');
+            filter: blur(5px);
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             position: absolute;
@@ -34,18 +35,32 @@
             z-index: -1;
             opacity: 0.7; /* Adjust transparency */
         }
+        .top-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url('data/img/full-logo-white.png'); /* Top image */
+            background-repeat: no-repeat; /* Prevent repetition */
+            background-position: center; /* Center the top image */
+            background-color: transparent; /* Ensure no background color */
+            width: 256px; /* Maintain original size */
+            height: 256px; /* Maintain original size */
+            z-index: 1; /* Ensure it appears on top */
+            filter: none;
+        }
         .email {
             font-size: 1.5em;
             position: absolute;
-            top: 10px; /* Adjust as needed to move it vertically */
+            bottom: 10px; /* Adjust as needed to move it vertically */
             left: 50%;
             transform: translateX(-50%);
-            z-index: 1;
-        }
+            z-index: 1; }
     </style>
 </head>
 <body>
     <div class="background"></div>
+    <div class="top-image"></div>
     <div class="email">
         <p><a href="mailto:aprescorp@gmail.com" style="color: white; text-decoration: none;">ApresCorp@gmail.com</a></p>
     </div>
