@@ -9,14 +9,13 @@
 
         body {
             margin: 0;
-            min-height: 100vh;
+            height: 100vh;
             font-family: 'Inconsolata', monospace;
             color: white;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px 20px 40px 20px; /* Added bottom padding */
             box-sizing: border-box;
             background: rgb(0, 0, 0); /* Fallback color */
             backdrop-filter: blur(10px);
@@ -36,39 +35,33 @@
             z-index: -1;
             opacity: 0.7; /* Adjust transparency */
         }
+        .top-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1; /* Allow to grow and center the content */
+            width: 100%;
+        }
         .top-image {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             background-image: url('data/img/full-logo-white.png'); /* Top image */
             background-repeat: no-repeat; /* Prevent repetition */
             background-position: center; /* Center the top image */
             background-color: transparent; /* Ensure no background color */
             width: 256px; /* Maintain original size */
             height: 256px; /* Maintain original size */
-            z-index: 1; /* Ensure it appears on top */
         }
         .email {
             font-size: 1.5em;
-            position: absolute;
-            bottom: 20px; /* Adjust as needed to move it vertically */
-            left: 50%;
-            transform: translateX(-50%);
+            margin-bottom: 10px; /* Ensure there's space at the bottom */
             z-index: 1;
-        }
-
-        @media (max-width: 768px) {
-            .email {
-                font-size: 1em; /* Adjust font size for smaller screens */
-                bottom: 10px; /* Move it slightly up on small screens */
-            }
         }
     </style>
 </head>
 <body>
     <div class="background"></div>
-    <div class="top-image"></div>
+    <div class="top-image-container">
+        <div class="top-image"></div>
+    </div>
     <div class="email">
         <p><a href="mailto:aprescorp@gmail.com" style="color: white; text-decoration: none;">ApresCorp@gmail.com</a></p>
     </div>
