@@ -9,13 +9,14 @@
 
         body {
             margin: 0;
-            height: 100vh;
+            min-height: 100vh;
             font-family: 'Inconsolata', monospace;
             color: white;
             display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            padding: 20px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 20px 40px 20px; /* Added bottom padding */
             box-sizing: border-box;
             background: rgb(0, 0, 0); /* Fallback color */
             backdrop-filter: blur(10px);
@@ -47,15 +48,21 @@
             width: 256px; /* Maintain original size */
             height: 256px; /* Maintain original size */
             z-index: 1; /* Ensure it appears on top */
-            filter: none;
         }
         .email {
             font-size: 1.5em;
             position: absolute;
-            bottom: 8%;
+            bottom: 20px; /* Adjust as needed to move it vertically */
             left: 50%;
             transform: translateX(-50%);
             z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .email {
+                font-size: 1em; /* Adjust font size for smaller screens */
+                bottom: 10px; /* Move it slightly up on small screens */
+            }
         }
     </style>
 </head>
