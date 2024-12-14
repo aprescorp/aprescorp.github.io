@@ -10,14 +10,12 @@
         body {
             margin: 0;
             height: 100vh;
-            font-family: 'Inconsolata', monospace;
-            color: white;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
+            font-family: 'Inconsolata', monospace;
+            color: white;
             background: rgb(0, 0, 0); /* Fallback color */
             backdrop-filter: blur(10px);
             position: relative;
@@ -39,10 +37,8 @@
         .content {
             flex-grow: 1; /* Allow the content to grow */
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 100%;
         }
         .top-image {
             background-image: url('data/img/full-logo-white.png'); /* Top image */
@@ -56,14 +52,7 @@
         .email {
             font-size: 1.5em;
             z-index: 1;
-            margin-bottom: 10px; /* Ensure there's space at the bottom */
-        }
-
-        @media (max-width: 768px) {
-            .email {
-                font-size: 1em; /* Adjust font size for smaller screens */
-                margin-bottom: 5px; /* Move it slightly up on small screens */
-            }
+            padding-bottom: 10px; /* Ensure there's space at the bottom */
         }
     </style>
 </head>
