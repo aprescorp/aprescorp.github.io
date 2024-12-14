@@ -50,10 +50,22 @@
             width: 256px; /* Maintain original size */
             height: 256px; /* Maintain original size */
         }
+        .email-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 10px; /* Ensure there's space at the bottom */
+        }
         .email {
             font-size: 1.5em;
-            margin-bottom: 10px; /* Ensure there's space at the bottom */
             z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .email {
+                font-size: 1em; /* Adjust font size for smaller screens */
+                padding-bottom: 5px; /* Move it slightly up on small screens */
+            }
         }
     </style>
 </head>
@@ -62,8 +74,10 @@
     <div class="top-image-container">
         <div class="top-image"></div>
     </div>
-    <div class="email">
-        <p><a href="mailto:aprescorp@gmail.com" style="color: white; text-decoration: none;">ApresCorp@gmail.com</a></p>
+    <div class="email-container">
+        <div class="email">
+            <p><a href="mailto:aprescorp@gmail.com" style="color: white; text-decoration: none;">ApresCorp@gmail.com</a></p>
+        </div>
     </div>
 </body>
 </html>
