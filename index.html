@@ -14,8 +14,9 @@
             color: white;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+            padding: 20px;
             box-sizing: border-box;
             background: rgb(0, 0, 0); /* Fallback color */
             backdrop-filter: blur(10px);
@@ -35,11 +36,12 @@
             z-index: -1;
             opacity: 0.7; /* Adjust transparency */
         }
-        .top-image-container {
+        .content {
+            flex-grow: 1; /* Allow the content to grow */
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            flex-grow: 1; /* Allow to grow and center the content */
             width: 100%;
         }
         .top-image {
@@ -49,35 +51,29 @@
             background-color: transparent; /* Ensure no background color */
             width: 256px; /* Maintain original size */
             height: 256px; /* Maintain original size */
-        }
-        .email-container {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding-bottom: 10px; /* Ensure there's space at the bottom */
+            z-index: 1; /* Ensure it appears on top */
         }
         .email {
             font-size: 1.5em;
             z-index: 1;
+            margin-bottom: 10px; /* Ensure there's space at the bottom */
         }
 
         @media (max-width: 768px) {
             .email {
                 font-size: 1em; /* Adjust font size for smaller screens */
-                padding-bottom: 5px; /* Move it slightly up on small screens */
+                margin-bottom: 5px; /* Move it slightly up on small screens */
             }
         }
     </style>
 </head>
 <body>
     <div class="background"></div>
-    <div class="top-image-container">
+    <div class="content">
         <div class="top-image"></div>
     </div>
-    <div class="email-container">
-        <div class="email">
-            <p><a href="mailto:aprescorp@gmail.com" style="color: white; text-decoration: none;">ApresCorp@gmail.com</a></p>
-        </div>
+    <div class="email">
+        <p><a href="mailto:aprescorp@gmail.com" style="color: white; text-decoration: none;">ApresCorp@gmail.com</a></p>
     </div>
 </body>
 </html>
